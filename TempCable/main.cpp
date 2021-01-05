@@ -46,21 +46,26 @@ void getSensors(std::vector<std::string>& v) {
 }
 
 int main(int argc, char* argv[])
-{
+{	
+    int interval = 5;
+
     std::vector<std::string> sensors;
     getSensors(sensors);
     printf("\n");
-	while(1)
+	while(true)
 	{
 		for (auto sensorID : sensors)
 		{
             printf(sensorID.c_str());
             printf("\t");
-            printf("temp: %3.3f °C", getTemp(sensorID));
+            //printf("temp: %3.3f° C", getTemp(sensorID));
+            printf("temp: %3.3f C", getTemp(sensorID));
             printf("\n");
 		}
         printf("\n");
-		sleep(5);
+
+		
+		sleep(interval);
 	}
 
 }
