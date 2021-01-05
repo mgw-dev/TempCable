@@ -56,7 +56,6 @@ int main(int argc, char* argv[])
 		{
 			printf(sensorID.c_str());
 			printf("\t");
-			//printf("temp: %3.3f° C", getTemp(sensorID));
 			printf("temp: %3.3f C", getTemp(sensorID));
 			printf("\n");
 		}
